@@ -43,6 +43,7 @@
 					</a></li>
 
 				</ul>
+				<strong><span sec:authorize ="isAuthenticated() " th:text="${#authentication.getPrincipal().getNombres()}">Juancito</span></strong>
 			</div>
 		</nav>
 	</header>
