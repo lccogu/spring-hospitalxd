@@ -29,8 +29,14 @@
 					<li class="nav-item active"><a class="nav-link" th:href="@{/}"><i class="fas fa-home"></i> Home
 							<span class="sr-only">(current)</span>
 					</a></li>
-					<li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item"><a class="nav-link" th:href="@{/medico}">
+					<li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/medico}">
 						<i class="fas fa-home"></i> Medico
+					</a></li>
+					<li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item"><a class="nav-link" th:href="@{/medico}">
+						<i class="fas fa-home"></i> Solicitar Cita
+					</a></li>
+					<li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item"><a class="nav-link" th:href="@{/medico}">
+						<i class="fas fa-home"></i> Gestionar Cita
 					</a></li>
 					<li sec:authorize="isAnonymous()" class="nav-item"><a class="nav-link" th:href="@{/usuario/register}">
 						<i class="fas fa-user-circle"></i>Register

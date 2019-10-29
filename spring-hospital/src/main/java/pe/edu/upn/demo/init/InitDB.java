@@ -30,7 +30,7 @@ public class InitDB implements CommandLineRunner{
 		this.usuarioRepository.deleteAll();
 		this.authorityRepository.deleteAll();
 		
-		/*Usuario juan = new Usuario();
+		Usuario juan = new Usuario();
 		juan.setUsername("juan");
 		juan.setPassword(passwordEncoder.encode("juan"));
 		juan.setApellidos("flores");
@@ -62,6 +62,6 @@ public class InitDB implements CommandLineRunner{
         manager.addAuthority("ACCESS_REST1");
         
         List<Usuario> usuarios = Arrays.asList(juan, admin, manager);        
-        this.usuarioRepository.saveAll(usuarios);	*/
+        this.usuarioRepository.saveAll(usuarios);	
 	}
 }
